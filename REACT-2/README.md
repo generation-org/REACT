@@ -7,14 +7,14 @@
 
 # Base code
 
-The base code for this exercise is [this](https://codepen.io/pen?&editors=0010) one provided on codepen by React.org. It's copied here. Make sure you read the code and understand it before continuing.
+The base code for this exercise is [this](https://pt-br.reactjs.org/redirect-to-codepen/components-and-props/extracting-components-continued) one provided on codepen by React.org. It's copied here. Make sure you read the code and understand it before continuing.
 
 # Part 1 - Creating components
 * Create a new component called ContactInfo
 * The component should have the following props:
     * E-mail
-    * Telephone
-    * Github
+    * Phone number
+    * Github profile link
 * Style your component as you wish with CSS
 
 # Part 2 - Integrating components
