@@ -9,6 +9,8 @@
 
 Create a stateless component called colorfulParagraph. This component should be a piece of text with its color defined by props.color.
 
+[Here's](https://pt-br.reactjs.org/docs/dom-elements.html#style) an example of how style can be defined by props:
+
 # Creating a stateful component
 
 * Create a stateful component called colorChooser that has color as its state. 
