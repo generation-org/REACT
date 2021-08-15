@@ -1,9 +1,14 @@
-const InitialState = {
+import { defineState } from 'redux-localstore';
+
+const defaultState = {
     auth: false
 };
 
+const InitialState = defineState(defaultState)('verifyLogin');
+
 const ENABLE_AUTH = "ENABLE_AUTH";
 const DISABLE_AUTH = "DISABLE_AUTH";
+
 
 
 const verifyLogin = (state = InitialState, action) => {
