@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, NavItem, Nav } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { connect } from "react-redux";
 
-const Navigationbar = () => {
-  const auth = useSelector((state) => state.auth);
+const Navigationbar = (props) => {
+  const { auth } = props;
   const render_user = () => {
     if (auth) {
       return <NavItem title="Item">Welcome User</NavItem>;
@@ -48,4 +48,10 @@ const Navigationbar = () => {
     </Navbar>
   );
 };
-export default Navigationbar;
+
+const mapStateToProps = state => ({
+  auth: state.verifyLogin.auth
+});
+
+
+export default connect(mapStateToProps)(Navigationbar);

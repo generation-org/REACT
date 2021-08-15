@@ -1,27 +1,35 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import { auth_enable, auth_disable } from "./store";
+import { connect } from "react-redux";
+import auth_enable  from "./actions/auth_enable";
+import auth_disable  from "./actions/auth_disable";
+
 
 const Login = props => {
-  const dispatch = useDispatch();
-  const login = useCallback(() => dispatch(auth_enable()), [dispatch]);
-  const logout = useCallback(() => dispatch(auth_disable()), [dispatch]);
 
   const redirect_home = func => {
     func();
     props.history.push("/");
   };
+
+  const { auth_enable, auth_disable } = props;
+  
   return (
     <>
-      <Button className="btn-primary" onClick={() => redirect_home(login)}>
+      <Button className="btn-primary" onClick={() => redirect_home(auth_enable)}>
         Login
       </Button>
-      <Button className="btn-primary" onClick={() => redirect_home(logout)}>
+      <Button className="btn-primary" onClick={() => redirect_home(auth_disable)}>
         Logout
       </Button>
     </>
   );
 };
 
-export default Login;
+
+const mapDispatchToProps = dispatch => ({
+  auth_enable: () => dispatch(auth_enable()),
+  auth_disable: () => dispatch(auth_disable()),
+});
+
+export default connect(null, mapDispatchToProps)(Login);
