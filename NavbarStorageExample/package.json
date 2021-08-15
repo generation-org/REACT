@@ -1,0 +1,33 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-bootstrap": "1.0.0-beta.12",
+    "react-dom": "16.8.6",
+    "react-redux": "7.1.1",
+    "react-router-dom": "5.0.1",
+    "react-scripts": "3.0.1",
+    "redux": "4.0.4"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
