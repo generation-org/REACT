@@ -1,8 +1,12 @@
 import { createStore } from "redux";
+import storeSynchronize from 'redux-localstore';
+import {defineState} from 'redux-localstore';
 
-const InitialState = {
+const defaultState = {
   auth: false
 };
+
+const InitialState = defineState(defaultState)('rootReducer')
 
 const rootReducer = (state = InitialState, action) => {
   switch (action.type) {
@@ -30,4 +34,5 @@ export const auth_disable = () => {
   };
 };
 const store = createStore(rootReducer);
+storeSynchronize(store);
 export default store;
